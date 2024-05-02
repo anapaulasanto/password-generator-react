@@ -9,7 +9,8 @@
 #### Esta é uma aplicação feita em React.js utilizando VITE, que gera senhas aleatórias.
 
 ## Exemplo de uso
-- Ao clicar no botão "Gerar senha" uma senha é mostrada na tela do usuário.
+- Ao clicar no botão "Definir tamanho" é possivel modificar o tamanho da senha.
+- Ao clicar no botão "Gerar senha" uma senha aleatória de 8 caracteres é gerada.
 - Ao clicar no botão "Copiar" a senha gerada é copiada para a área de transferência.
 - Ao clicar novamente em "Gerar senha" o botão "Copiar senha" é atualizado.
 
