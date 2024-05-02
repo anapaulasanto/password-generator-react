@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -39,6 +40,15 @@ h1 {
   color: white;
 }
 
+input {
+  margin: 10px 20px;
+  background-color: #111111;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: white;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -51,9 +61,11 @@ button {
   transition: border-color 0.25s;
   margin: 10px 10px 30px 0;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -64,9 +76,11 @@ button:focus-visible {
     color: #aaabac;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #eaebec;
   }
+
   button {
     background-color: #111111;
     color: white;

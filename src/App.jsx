@@ -4,11 +4,12 @@ import { useState } from "react";
 function App() {
   const [password, setPassword] = useState("")
   const [copyText, setCopyText] = useState("Copiar")
+  const [passwordSize, setPasswordSize] = useState(12)
 
   function generate() {
     const characters = "!@#$%¨&*1234567890qwertyuiopasdfghjlçzxcvbnmZXCVBNMQWERTYUIOPASDFGHJKLÇ,.;/"
     let newPassword = ""
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < passwordSize; i++) {
       let randomNumber = Math.floor(Math.random() * characters.length)
 
       newPassword += characters[randomNumber]
@@ -17,16 +18,26 @@ function App() {
     setCopyText("Copiar")
   }
 
-  function handleClick() {
+  function copyToClipboard() {
     window.navigator.clipboard.writeText(password)
     setCopyText("Copiado")
   }
 
   return (
-    <div className="className">
+    <div className="app">
       <h1>Gerador de senha</h1>
-      <button onClick={generate}>Gerar senha</button>
-      <button onClick={handleClick}> {copyText} </button>
+      <div>
+        <label htmlFor="passwordSize">Tamanho:</label>
+        <input
+          type="number" 
+          id="passwordSize" 
+          min={1}
+          value={passwordSize}
+          onChange={(ev) => setPasswordSize(ev.target.value)}
+       />
+      </div>
+      <button onClick={generate}>Gerar senha de {passwordSize} caracteres</button>
+      <button onClick={copyToClipboard}> {copyText} </button>
       <div>{password}</div>
     </div>
   )
